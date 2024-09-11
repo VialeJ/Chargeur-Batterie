@@ -1,6 +1,6 @@
 # Développement d'un chargeur de batterie
 
-## 1 Cellule
+## 1 Cellule entre 5 et 7 Ah
 
 ## Différents types de batterie 
 - Li-ion
@@ -9,6 +9,15 @@
 
 ## Systèmes de protection
 
-## Faible coûts
+## Fuel gauge en I2C
 
-## CMS
+## 3 types d'alimentation possible:
+- USB (5V)
+- 12V
+- Depuis un panneau solaire (jusqu'à 30V)
+
+## CMS & éviter un boitier BGA
+
+## Charge de 1A
+
+## Obtenir le coût le plus faible
