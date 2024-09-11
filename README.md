@@ -20,4 +20,8 @@
 
 ## Charge de 1A
 
+
 ## Obtenir le coût le plus faible
+Le but est de pouvoir rendre le système reproductible 
+
+# Références des composants
