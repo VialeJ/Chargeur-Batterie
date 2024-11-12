@@ -3,9 +3,9 @@
 ## 1 Cellule entre 5 et 7 Ah
 
 ## Différents types de batterie 
-- Li-ion
-- LiPo
-- LiFePO3*
+- Li-ion (3.6V nom.)
+- LiPo (3.7V nom.)
+- LiFePO4 (3.2V nom.)
 
 ## Systèmes de protection
 
@@ -25,3 +25,9 @@
 Le but est de pouvoir rendre le système reproductible 
 
 # Références des composants
+
+# À faire après 
+
+Etudier circuits intégrés existants pour la cherge et la fuel gauge et choisir, on exclut les BGA.
+(Eventuellement en //)
+INA219 : Mesure de tension, courant et puissance
