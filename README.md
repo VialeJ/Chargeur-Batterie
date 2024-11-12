@@ -3,9 +3,9 @@
 ## 1 Cellule entre 5 et 7 Ah
 
 ## Différents types de batterie 
-- Li-ion
-- LiPo
-- LiFePO3*
+- Li-ion (3.6V nom.)
+- LiPo (3.7V nom.)
+- LiFePO4 (3.2V nom.)
 
 ## Systèmes de protection
 
