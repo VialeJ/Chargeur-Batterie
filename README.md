@@ -25,3 +25,9 @@
 Le but est de pouvoir rendre le système reproductible 
 
 # Références des composants
+
+# À faire après 
+
+Etudier circuits intégrés existants pour la cherge et la fuel gauge et choisir, on exclut les BGA.
+(Eventuellement en //)
+INA219 : Mesure de tension, courant et puissance
