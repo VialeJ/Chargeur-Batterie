@@ -1,54 +1,35 @@
- #include <Wire.h>
+#include <Wire.h>
 #include <Adafruit_INA219.h>
 
+// Initialisation de l'objet INA219
 Adafruit_INA219 ina219;
 
-
-void setup(void) 
-{
+void setup() {
   Serial.begin(115200);
-  while (!Serial) {
-      // will pause Zero, Leonardo, etc until serial console opens
-      delay(1);
+  // Initialisation du bus I2C et du capteur INA219
+  if (!ina219.begin()) {
+    Serial.println("Impossible de trouver le capteur INA219 !");
+    while (1); // Boucle infinie si le capteur n'est pas détecté
   }
-    
-  Serial.println("Hello!");
-  
-  // Initialize the INA219.
-  // By default the initialization will use the largest range (32V, 2A).  However
-  // you can call a setCalibration function to change this range (see comments).
-  if (! ina219.begin()) {
-    Serial.println("Failed to find INA219 chip");
-    while (1) { delay(10); }
-  }
-  // To use a slightly lower 32V, 1A range (higher precision on amps):
-  //ina219.setCalibration_32V_1A();
-  // Or to use a lower 16V, 400mA range (higher precision on volts and amps):
-  //ina219.setCalibration_16V_400mA();
-
-  Serial.println("Measuring voltage and current with INA219 ...");
+  Serial.println("Capteur INA219 initialisé avec succès !");
 }
 
-void loop(void) 
-{
-  float shuntvoltage = 0;
-  float busvoltage = 0;
-  float current_mA = 0;
-  float loadvoltage = 0;
-  float power_mW = 0;
+void loop() {
+  float shuntVoltage = ina219.getShuntVoltage_mV(); // Tension sur la résistance shunt (mV)
+  float busVoltage = ina219.getBusVoltage_V();      // Tension sur le bus (V)
+  float current_mA = ina219.getCurrent_mA();        // Courant mesuré (mA)
+  float power_mW = ina219.getPower_mW();            // Puissance mesurée (mW)
 
-  shuntvoltage = ina219.getShuntVoltage_mV();
-  busvoltage = ina219.getBusVoltage_V();
-  current_mA = ina219.getCurrent_mA();
-  power_mW = ina219.getPower_mW();
-  loadvoltage = busvoltage + (shuntvoltage / 1000);
-  
-  Serial.print("Bus Voltage:   "); Serial.print(busvoltage); Serial.println(" V");
-  Serial.print("Shunt Voltage: "); Serial.print(shuntvoltage); Serial.println(" mV");
-  Serial.print("Load Voltage:  "); Serial.print(loadvoltage); Serial.println(" V");
-  Serial.print("Current:       "); Serial.print(current_mA); Serial.println(" mA");
-  Serial.print("Power:         "); Serial.print(power_mW); Serial.println(" mW");
-  Serial.println("");
+  // Affichage des mesures
+  Serial.print("Tension bus (V) : ");
+  Serial.println(busVoltage);
+  Serial.print("Tension shunt (mV) : ");
+  Serial.println(shuntVoltage);
+  Serial.print("Courant (mA) : ");
+  Serial.println(current_mA);
+  Serial.print("Puissance (mW) : ");
+  Serial.println(power_mW);
+  Serial.println("-----------------------------");
 
-  delay(2000);
+  delay(1000); // Attendre une seconde avant la prochaine mesure
 }
