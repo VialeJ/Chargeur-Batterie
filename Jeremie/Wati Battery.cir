@@ -1,0 +1,26 @@
+.title KiCad schematic
+J5 __J5
+U3 __U3
+L1 Net-_D2-K_ +5V 100µH @700kHz
+J1 __J1
+D2 __D2
+R11 Vsys Vbat+ 1mOhm
+C7 Vbat+ Vbat- 1u
+D5 __D5
+R10 Net-_J1-Pin_2_ Net-_D5-A_ 1.5k
+TH2 __TH2
+R9 Net-_J1-Pin_2_ Net-_D4-A_ 1.5k
+D4 __D4
+C3 +5V Vbat- 330u
+R12 Vbat- Net-_U5-BIN_ 4.7Meg
+U5 __U5
+C8 Net-_U5-VDD_ Vbat- 0.47u
+J3 __J3
+J4 __J4
+C6 +5V Vbat- 1u
+R1 Net-_U4-ISET2_ Vbat- 10k
+R7 Net-_U4-ISET_ Vbat- 540
+U4 __U4
+R8 Net-_U4-PRETERM_ Vbat- 2k
+C2 Net-_J3-Pin_1_ Vbat- 100u
+.end
