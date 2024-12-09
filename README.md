@@ -14,7 +14,7 @@
 ## 3 types d'alimentation possible:
 - USB (5V)
 - 12V
-- Depuis un panneau solaire (jusqu'à 30V)
+- Depuis un panneau solaire 26V (on prendra un Vin max de 28V)
 
 ## CMS & éviter un boitier BGA
 
