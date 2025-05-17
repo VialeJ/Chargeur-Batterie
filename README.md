@@ -29,10 +29,10 @@ Permet la communication des informations de charge et de décharge à un MCU
 ## Obtenir le coût le plus faible
 Le but est de pouvoir rendre le système reproductible 
 
-# Références des composants
+## Références des composants
 - Ajout de la Datashette des composants utilisés dans le repo git
 
-# Travail à faire :
+## Travail à faire :
 - Etudier circuits intégrés existants pour la cherge et la fuel gauge et choisir
 - INA219 : Mesure de tension, courant et puissance
 - Documentation
